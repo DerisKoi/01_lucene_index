@@ -255,7 +255,7 @@ public class IndexUtil {
 			writer = new IndexWriter(directory, new IndexWriterConfig(Version.LUCENE_35, new StandardAnalyzer(Version.LUCENE_35)));
 			writer.deleteAll();
 			Document doc = null;
-			for(int i=0;i<ids.length;i++) {  //创建文档，创建 document对象
+			for(int i=0;i<ids.length;i++) {  //创建文档，创建 document对象1
 				doc = new Document();
 				doc.add(new Field("id",ids[i],Field.Store.YES,Field.Index.NOT_ANALYZED_NO_NORMS));
 				doc.add(new Field("email",emails[i],Field.Store.YES,Field.Index.NOT_ANALYZED));
